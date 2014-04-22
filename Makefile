@@ -10,7 +10,7 @@ libcrash.o :
 	$(CC) $(CFLAGS) $(INCLUDES) -fpic libcrash.c
 
 libcrash : libcrash.o
-	$(CC) -shared -o libcrash.so libcrash.o $(LDFLAGS)
+	$(CC) -shared -o libcrash.so libcrash.o -ludev
 
 install : libcrash
 	cp libcrash.so /usr/local/lib
